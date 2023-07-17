@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2e228d2cbc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">service</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>designer</p>
+                <h1>Hi, I'm <span>Sreekuttan</span> <br>from kerala</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ............about............. -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="sreevio1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>hello my name is sreekuttan ps</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            skills
+                        </p>
+                        <p class="tab-links" onclick="opentab('experience')">
+                            experience
+                        </p>
+                        <p class="tab-links"onclick="opentab('education')">
+                            education
+                        </p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>UI?UX</span><br>designing
+                            </li>
+                            <li>
+                                <span>video editing </span><br>designing
+                            </li>
+                            <li>
+                                <span>UI?UX</span><br>designing
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>UI?UX</span><br>designing
+                            </li>
+                            <li>
+                                <span>video editing </span><br>ppss
+                            </li>
+                            <li>
+                                <span>UI?UX</span><br>designing
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>UI?UX</span><br>designing
+                            </li>
+                            <li>
+                                <span>video editing </span><br>work
+                            </li>
+                            <li>
+                                <span>UI?UX</span><br>designing
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- .....................services............... -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2> graphic designer</h2>
+                    <p>i am agraphic designer</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2> gooddesigner</h2>
+                    <p>i am agraphic designer</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>freshdesigner</h2>
+                    <p>i am agraphic designer</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- .........portfolio......... -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">my works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="sreeb2.jpg">
+                    <div class="layer">
+                        <h3>social media</h3>
+                        <p>this is my instagram</p>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="sreeb2.jpg">
+                    <div class="layer">
+                        <h3>social media</h3>
+                        <p>this is my facebook</p>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="sreeb2.jpg">
+                    <div class="layer">
+                        <h3>social media</h3>
+                        <p>this is my twitter</p>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">see more</a>
+        </div>
+
+    </div>
+
+    <!-- ...........contact.......... -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">contact me</h1>
+
+
+                    <p><i class="fas fa-paper-plane"></i>sreekuttanps225@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>9446861434</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="sreeb3.jpg" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form >
+                         <input type="text" name="Name" placeholder="Your Name" required>
+                         <input type="email" name="email" placeholder="Your email" required>
+                         <textarea name="message"  rows="6" placeholder="Your Message"></textarea>
+                         <button type="submit">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
