@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="wedding.css">
+    </head>    
+        <body>
+            <div class="full-img" id="fullimgbox">
+                <img src="lak1.jpg" id="fullimg" >
+                <span onclick="closeFullImg()">X</span>
+
+            </div>
+            <div class="img-gallery">
+                <img src="we1" onclick="openFullImg(this.src)">
+                <img src="we2" onclick="openFullImg(this.src)">
+                <img src="we3" onclick="openFullImg(this.src)">
+                <img src="we4" onclick="openFullImg(this.src)">
+                <img src="we5" onclick="openFullImg(this.src)">
+                <img src="we6" onclick="openFullImg(this.src)">
+                <img src="we3" onclick="openFullImg(this.src)">
+
+            </div>
+        <script>
+                var fullimgbox =document.getElementById("fullimgbox");
+                var fullimg =document.getElementById("fullimg");
+
+                function openFullImg(pic){
+                    fullimgbox. style .display = "flex"
+                    fullimg.src=pic;
+                }
+                function closeFullImg(){
+                    fullimgbox.style.display="none";
+                }
+
+        </script>
+        </body>
+   
+</html>

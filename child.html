@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="child.css">
+    </head>    
+        <body>
+            <div class="full-img" id="fullimgbox">
+                <img src="lak1.jpg" id="fullimg" >
+                <span onclick="closeFullImg()">X</span>
+
+            </div>
+            <div class="img-gallery">
+                <img src="sr1" onclick="openFullImg(this.src)">
+                <img src="sr2" onclick="openFullImg(this.src)">
+                <img src="sr3" onclick="openFullImg(this.src)">
+                <img src="sr4" onclick="openFullImg(this.src)">
+                <img src="sr5" onclick="openFullImg(this.src)">
+                <img src="sr6" onclick="openFullImg(this.src)">
+                <img src="sr3" onclick="openFullImg(this.src)">
+
+            </div>
+        <script>
+                var fullimgbox =document.getElementById("fullimgbox");
+                var fullimg =document.getElementById("fullimg");
+
+                function openFullImg(pic){
+                    fullimgbox. style .display = "flex"
+                    fullimg.src=pic;
+                }
+                function closeFullImg(){
+                    fullimgbox.style.display="none";
+                }
+
+        </script>
+        </body>
+   
+</html>
