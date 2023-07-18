@@ -12,13 +12,15 @@
         <div class="container">
             <nav>
                 <img src="logo.png" class="logo">
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">service</a></li>
-                    <li><a href="#">portfolio</a></li>
-                    <li><a href="#">contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#services">service</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>designer</p>
@@ -35,7 +37,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
-                    <p>hello my name is sreekuttan ps</p>
+                    <p>Welcome to the captivating world of Sreekuttan P. S., a multi-talented artist hailing from the picturesque landscapes of Kerala, Kottayam. With a keen eye for beauty and a passion for capturing life's most precious moments, Sreekuttan thrives as a masterful photographer, a visionary editor, and a skilled videographer. As a valued member of the esteemed OneClickWedding Studio in Kottayam, Sreekuttan weaves together the art of storytelling and the magic of visual arts, crafting timeless and breathtaking pieces that resonate with hearts and souls alike. Embracing every frame as an opportunity to evoke emotions and preserve memories, Sreekuttan's work transcends the ordinary and elevates it to extraordinary heights, leaving an indelible mark on every project he undertakes.</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">
                             skills
@@ -174,17 +176,21 @@
                     <a href="sreeb3.jpg" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form >
+                    <form name="submit-to-google-sheet" >
                          <input type="text" name="Name" placeholder="Your Name" required>
                          <input type="email" name="email" placeholder="Your email" required>
                          <textarea name="message"  rows="6" placeholder="Your Message"></textarea>
-                         <button type="submit">submit</button>
+                         <button type="submit" class="btn btn2">submit</button>
                     </form>
+
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
 
     </div>
+
+
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
@@ -200,5 +206,32 @@
             document.getElementById(tabname).classList.add("active-tab")
         }
     </script>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0"
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px"
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzEZzNDV49303EV3_jes83eKudl7IylBiuHSLrZzwnNF01GCJB0ugZL1wqvjzWfOIH4/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
